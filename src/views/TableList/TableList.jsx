@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Grid, Row, Col, Table, Button, Modal } from "react-bootstrap";
+import { Grid, Row, Col, Table, Button, Modal,DropdownButton ,Dropdown,ButtonGroup} from "react-bootstrap";
 import "./Tablelist.css";
 import Card from "components/Card/Card.jsx";
 import { thArray, tdArray } from "variables/Variables.jsx";
 import "../Icons/Icons.css";
-import SweetAlert from "react-bootstrap-sweetalert"
+
 import '../Icons/Icons.css';
 import swal from '@sweetalert/with-react'
 class TableList extends Component {
@@ -98,6 +98,7 @@ displayedit=()=>{
   <option value="Chatter Admin">Chatter Admin</option>
  
 </select>
+
 {/* <button class="swal-button swal-button--confirm">cancel</button>  */}
 <button  className="outer" className="btn " style={{float:"left",color:"white",backgroundColor:"#7cd1f9",marginTop:"30px",outline:"none",border:"none",marginBottom:"20px",width:"120px" }}  onClick={this.update}>save</button>
  <button  className="inner" className="btn btn-danger" style={{float:"right",color:"white",backgroundColor:"#fa1825",marginTop:"30px",marginBottom:"20px",width:"120px"}} onClick={this.canceled}>cancel</button>
@@ -350,6 +351,13 @@ displayedit=()=>{
                         })}
                       </tbody>
                     </Table>
+
+                    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+</DropdownButton>;
+
                     <button style={{ marginLeft: "20px", outline: "none", borderRadius: "19px", padding: "7px", paddingLeft: "13px", border: "2px solid  #777777", backgroundColor: "white" }}><span>6<i className="fa fa-sort-asc" aria-hidden="true"></i></span>
                     </button>&nbsp;&nbsp;&nbsp;rows visible
             <br></br>
@@ -361,7 +369,7 @@ displayedit=()=>{
                       <a href="#">&rsaquo;</a>
                       <a href="#">&raquo;</a>
                     </div>
-
+                   
 
                   </div>
                 }
